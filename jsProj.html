@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+ 
+  .collapsible {
+    background-color: rgb(131, 220, 255);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+ 
+  .active, .collapsible:hover {
+    background-color: rgb(91, 167, 255);
+  }
+  
+ 
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #ac9797;
+  }
+  
+  
+
+
+#a1 {
+  padding: 50px;
+  
+  transition: transform .5s;
+  
+  
+  margin: 0 auto;
+}
+
+#a1 :hover {
+ 
+  transform: scale(1.5); 
+}
+
+#a2 {
+  padding: 50px;
+  
+  transition: transform 80s;
+  
+  
+  margin: 0 auto;
+}
+
+#a2 :hover {
+ 
+  transform: scale(1.5); 
+}
+
+
+
+#a3 {
+  padding: 50px;
+  
+  transition: transform .5s;
+  
+  
+  margin: 0 auto;
+}
+
+#a3 :hover {
+ 
+  transform: scale(1.5); 
+}
+
+#a4 {
+  padding: 50px;
+  
+  transition: transform .5s;
+  
+  
+  margin: 0 auto;
+}
+
+#a4 :hover {
+ 
+  transform: scale(1.5); 
+}
+</style>
+</head>
+
+<body>
+<div name="fib">
+      <button type="button" class="collapsible">Generate Fibanocci</button>
+      <div class="content">
+      <div class="row">
+       <div class="col">
+         <form id="frm1">
+            <label> <h4> Enter th nth number to find fibanocci number </h4> </label><br>
+           <input type="number" id="x1">
+         </form>
+        <button type="button" class="btn btn-success" onclick="fib()">GET FIBANOCCI NUMBER </button>
+         <p><br> Example of fib series  <br> 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, ...</p>
+      </div>
+      <div class="col" id="log">
+
+      </div>
+    </div>
+    </div>
+  </div>
+<div name="prime">
+    <button type="button" class="collapsible">Prime numbers</button>
+    <div class="content">
+    <div class="row">
+     <div class="col">
+       <p><strong>Prime Numbers</strong> are the numbers which are divisible by <strong>1</strong> and by <strong>itself ***ONLY*** <br></strong>  <i> 0 and 1 are not prime numbers</i></p>
+       <form id="frm2">
+          <label> <h4> Enter the number Check if it is a prime or not </h4> </label><br>
+         <input type="number" id="x2">
+       </form>
+      <button type="button" class="btn btn-success" onclick="prime()">Prime Check</button>
+    </div>
+    <div class="col" id="log">
+
+    </div>
+  </div>
+  </div>
+  </div>
+<div name="fact">
+      <button type="button" class="collapsible">Factorial</button>
+      <div class="content">
+      <div class="row">
+       <div class="col">
+         <form id="frmfact">
+            <label> <h4> Enter the number to find factorial </h4> </label><br>
+           <input type="text" id="x4">
+         </form>
+         <button type="button" class="btn btn-danger" onclick="fact()">Factorial</button>
+        </div>
+      <div class="col" id="log4">
+  
+      </div>
+      </div>
+      </div>
+   </div>
+<div name="primeGen">
+  <button type="button" class="collapsible">Prime generate upto n</button>
+  <div class="content">
+      <div class="row">
+        <div class="col">
+          <form id="frmprime">
+            <label> <h4> Enter the number limit to Generate Prime numbers </h4> </label><br>
+           <input type="text" id="x5">
+         </form>
+      <button type="button" class="btn btn-success" onclick="primeGen()">Generate</button>
+    </div> 
+      <div class="col" id="writePrime">
+
+      </div>
+    </div>
+    </div>
+  </div>
+<div name="primeN2N">
+      <div class="row">
+        <div class="col">
+      <button type="button" class="btn btn-secondary" onclick="primen2n()">Generate Prime Numbers from n to n</button>
+    </div> 
+      <div class="col" id="writePrime2">
+
+      </div>
+    </div>
+  </div>
+  <div name="Pattern Constructor">
+    <button type="button" class="collapsible">Generate Pattern</button>
+    <div class="content">
+      <p>Types of available patterns <br></p>
+  
+      <div class="row">
+     <div class="col-lg-3" id="a1">
+       <img src="patterns/2.png" height="200px" alt="pattern 1" onclick="patternGen()">
+    </div>
+    <div class="col-lg-3" id="a2">
+      <img src="patterns/3.png" height="200px" alt="pattern 2" onclick="patternGen2()">
+   </div>
+   <div class="col-lg-3" id="a3">
+    <img src="patterns/4.png" height="200px" alt="pattern 3"  onclick="patternGen3()">
+  </div>
+  <div class="col-lg-3" id="a4">
+    <img src="patterns/1.png" height="200px" alt="pattern 4" onclick="patternGen4()">
+  </div>
+       <!--<p>Give the inputs for how the patter to be construted <br> </p>
+       <form id="frmPatt">
+          <label> <h4> Enter the String </h4> </label><br>
+         <input type="text" id="vow1">
+       </form>
+      <button type="button" id="vow2" class="btn btn-success" onclick="countVow()">Submit String</button>
+       -->
+  
+  
+      
+    <div class="col" id="outgen">
+  </div>
+    </div>
+    </div>
+    </div>
+  
+<div name="rotate">
+      <button type="button" class="collapsible">String Rotate</button>
+      <div class="content">
+      <div class="row">
+       <div class="col">
+         <form id="frm3">
+            <label> <h4> Enter the String to rotate </h4> </label><br>
+           <input type="text" id="x2">
+         </form>
+        <button type="button" id="x3" class="btn btn-success" onclick="rotateString()">Rotate</button>
+      </div>
+      <div class="col" id="log2">
+  
+      </div>
+      </div>
+      </div>
+ </div>
+<div name="palindrome">
+        <button type="button" class="collapsible">Check for Palindrome</button>
+        <div class="content">
+        <div class="row">
+         <div class="col">
+          <p>A palindrome is a word which when spelled from right to left and left to right gives the same word</p>
+
+           <form id="frm4">
+              <label> <h4> Enter the String to check if it is a palindrome or not </h4> </label><br>
+             <input type="text" id="y2">
+           </form>
+          <button type="button" id="y3" class="btn btn-success" onclick="palindrome()">Check</button>
+        </div>
+        <div class="col" id="log3">
+    
+        </div>
+        </div>
+        </div>
+  </div>
+  <div name="Remove_Char">
+    <button type="button" class="collapsible">Remove Character </button>
+    <div class="content">
+    <div class="row">
+     <div class="col">
+       <p>This segment will get a string as an input and u can remove a specific character by mentioning the position <br> </p>
+       <form id="frmChar">
+          <label> <h4> Enter the String </h4> </label><br>
+         <input type="text" id="char1">
+       </form>
+      <button type="button" id="char2" class="btn btn-success" onclick="charRem()">Submit String</button>
+    </div>
+    <div class="col" id="char3">
+
+    </div>
+    <div class="col" id="out">
+
+    </div>
+    </div>
+    </div>
+</div>
+<div name="Count vowel">
+  <button type="button" class="collapsible">Count Vowel </button>
+  <div class="content">
+  <div class="row">
+   <div class="col">
+     <p>This segment will get a string as an input and counts the number of vowels in the string <br> </p>
+     <form id="frmVow">
+        <label> <h4> Enter the String </h4> </label><br>
+       <input type="text" id="vow1">
+     </form>
+    <button type="button" id="vow2" class="btn btn-success" onclick="countVow()">Submit String</button>
+  </div>
+  
+  <div class="col" id="outVow">
+
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<script>
+
+
+function fib()
+                    {
+                       // var id1 = prompt("Number to generate fib series");
+                      //  alert("Entered number is" +" " + id1 );
+                      var id1 = document.getElementById("frm1");
+                      var k = id1.elements[0].value;
+                        var x = k ;
+                      
+                        if (x == 0)
+                          {
+                            alert("Enter a number greater than 0" )                    
+                          }
+                        else if(x==1)
+                          {
+                           // alert("The First fibanocci number is  0")
+                            document.getElementById('log').innerHTML = "The " +  x + " st fibanocci number is 0 "  ;
+
+                          }
+                          
+                        else if(x==2)
+                          {
+                            //alert("The Second fibanocci number is  1")
+                            document.getElementById('log').innerHTML = "The " +  x + " nd fibanocci number is 1 "  ;
+
+                          }
+                        else{
+                              var y = 0;
+                             var z = 1;
+                             var fib = 0;
+                             for(var i=0; i<x-2 ; i++)
+                              {
+                                fib = z+y;
+                                y=z;
+                                z=fib;
+
+                              }
+                              
+                             if(x%10 == 3 || x==3)
+                             {
+                               // alert("The " + x  + " rd fibanocci number is  " + fib)
+                                document.getElementById('log').innerHTML = "The " +  x + " rd fibanocci number is  " + fib ;
+                             }
+                                else{
+                               // alert("The " + x  + " th fibanocci number is  " + fib)
+                                document.getElementById('log').innerHTML = "The " + x + " th fibanocci number is  " + fib ;
+
+                                 }
+                             }
+                
+         }
+function prime()
+         {
+          // var id1 = prompt("Number to Check whether prime or not");
+          // alert("Entered number is" +" " + id1 );
+           var id1 = document.getElementById("frm2");
+            var k = id1.elements[0].value;
+            var x = k;
+            if(x==0 || x==1)
+            {
+                alert( x + "  doesnt fall in the category of prime numbers")
+            }
+            else if(x==2)
+            {
+                alert( x + "  is a prime number")
+
+            }
+            else{
+                var y= 0;
+                for(var i=2 ;i<x; i++)
+                {
+                    y= x%i;
+                    if(y!=0)
+                    continue;
+                    else
+                    {
+                        break;
+
+                    }
+                }
+                
+                if(y!=0)
+                {
+                    alert( x + "  is a prime number")
+
+                }
+                else
+                {
+                    //document.write.innerText("notprime");
+                    alert( x + "  is not a prime number")
+
+                }
+
+
+            }
+
+         }           
+function primeGen()
+         {
+   
+          //var id1 = prompt("Enter the limit  to gnereate Prime numbers ");
+           // alert("Entered number is" +" " + id1 );
+            var id1 = document.getElementById("frmprime");
+            var k = id1.elements[0].value;
+            var x = k;
+            var y=0;
+            var i=0;
+           var strng = "2";
+            var checksum = 0;
+            //x = id1;
+            if(x==0 || x==1)
+            {
+             document.getElementById('writePrime').innerHTML = "Cant gen Primes for value below " + x  ;
+            }
+            else{
+              for( i=0 ;i<x; i++)
+              {
+                for(var j=2; j<i; j++)
+                  {
+                     y= i%j;
+                    if(y!=0){
+                      checksum = 1;  }
+                   
+                   else
+                   {
+                      checksum = 0;
+                      break;
+                   }
+                   
+                        }
+                        if(checksum == 1)
+                        {
+                          //document.write(",")  ;
+                         // document.write(i)  ;
+                      var st = i.toString();
+                         strng = strng + "," +st;
+                         
+                        }
+                        
+
+                        
+                    }
+                    document.getElementById('writePrime').innerHTML = strng  ;
+                
+            }
+         }
+function primen2n()
+{
+  var id2 = prompt("gnereate Prime numbers From");
+  var id1 = prompt("generate prime numbers till")
+  if(id2>id1)
+  {
+    var h = id2;
+    id2 = id1;
+    id1 = h;
+  }
+            alert("Generate prime number form  " + id2 + " to  " + id1 );
+            var y=0;
+            var i=0;
+           var strng = "Primes are :";
+            var checksum = 0;
+            x = id1;
+            if(x<0 || id2<0)
+            {
+             document.getElementById('writePrime').innerHTML = "Cant gen Primes for value below zero"   ;
+            }
+            else{
+              if(x<3 || id2<3)
+              {
+                strng = strng + "  2";
+              }
+              for( i=id2 ;i<=x; i++)
+              {
+                for(var j=2; j<i; j++)
+                  {
+                     y= i%j;
+                    if(y!=0){
+                      checksum = 1;  }
+                   
+                   else
+                   {
+                      checksum = 0;
+                      break;
+                   }
+                   
+                        }
+                        if(checksum == 1)
+                        {
+                          //document.write(",")  ;
+                         // document.write(i)  ;
+                      var st = i.toString();
+                         strng = strng + "," +st;
+                         
+                        }
+                        
+
+                        
+                    }
+                    document.getElementById('writePrime2').innerHTML = strng  ;
+                
+            }
+}  
+function fact()
+{
+  //var id1 = prompt("Enter the limit  to get factorial ");
+   //alert("Entered number is" +" " + id1 );
+   var id1 = document.getElementById("frmfact");
+    var k = id1.elements[0].value;
+  var fac = 1;
+  for(i=1;i<=k;i++){
+    fac = fac * i;
+  }
+  document.getElementById('log4').innerHTML = fac  ;
+}
+function rotateString()
+        {
+            var id1 = document.getElementById("frm3");
+           var k = id1.elements[0].value;
+            //document.getElementById('log2').innerHTML = k ;
+            var arr = k.split("");
+            var j = arr.length;
+            var z = " Entered String :  " + k + "<br> <h5> Rotation : </h5> <br>";
+            var b = j-1;
+            //document.getElementById('log2').innerHTML = j + "<br>" ;
+            for(i=0; i<j; i++)
+            {
+              var temp = arr[0];
+
+              for(var k=0; k<b; k++)
+              {
+                arr[k]= arr[k+1];
+              }
+              arr[j-1]= temp;
+              
+              //document.write(arr + "<br>")
+              z = z + "  " + arr.join("") + "<br>";
+              document.getElementById('log2').innerHTML = z ;
+            }
+
+
+        }
+function palindrome()
+{
+  var id1 = document.getElementById("frm4");
+  var k = id1.elements[0].value;
+  var arr = k.split("");
+  var j = arr.length;
+  var len = j-1;
+  var z = " Entered String :  " + k + "<br> <h5> Rotation : </h5> <br>";
+ // document.getElementById('log3').innerHTML = j ;
+  if(j<2)
+  document.getElementById('log3').innerHTML = "Single letter is always a palindrome" ;
+  else if(j%2 == 0)
+  {
+   // document.getElementById('log3').innerHTML = "even" ;
+   j = j/2;
+  }
+  else{
+    //document.getElementById('log3').innerHTML = "odd" ;
+  j = j - 1;
+  j = j/2;
+  }
+  for(i=0; i<j; i++)
+  {
+    if(arr[i]==arr[len-i])
+    {
+      count= 1;
+    }
+    else{
+      count = 0;
+      break;
+    }
+  }
+
+  if(count==1)
+  {
+      document.getElementById('log3').innerHTML = "Palindrome" ;
+
+  }
+  else{
+        document.getElementById('log3').innerHTML = "Not a Palindrome" ;
+
+  }
+}
+
+function charRem()
+{
+  var id1 = document.getElementById("frmChar");
+  var k = id1.elements[0].value;
+  var arr = k.split("");
+  var j = arr.length;
+  var empt = "";
+  empt = empt + "<h5>"+j+"</h5>";
+  document.getElementById('char3').innerHTML = "The length of the entered string is " + empt ;
+  pos = prompt("Sring has a length " + j + "  Enter the position to remove Character")
+
+  if(pos>j || pos<0)
+  {
+    alert("Entered value is not valid");
+    charRem();
+  }
+  else{
+    pos = pos-1;
+    temp = arr[pos];
+    for(i=pos; i<j; i++)
+    {
+      arr[i]= arr[i+1];
+    }
+    empt = arr.join("") + "<br>" + "The removed letter from string is " +"<strong>"+temp+"</strong>";
+    document.getElementById('out').innerHTML = empt ;
+
+  }
+}
+function countVow()
+{
+  var id1 = document.getElementById("frmVow");
+  var k = id1.elements[0].value;
+  var arr = k.split("");
+  var j = arr.length;
+  var count = 0;
+ // document.getElementById('outVow').innerHTML = "The length of the entered string is " + j ;
+ for(i=0; i<j; i++)
+ {
+   if(arr[i]=="a" || arr[i]== "e" || arr[i]== "i" || arr[i]=="o"  || arr[i]== "u" )
+   {
+    count++;
+   }
+
+ }
+ if(count!=0)
+ {
+     document.getElementById('outVow').innerHTML = "The total number of vowels in the string is " + count ;
+
+ }
+ else{
+    document.getElementById('outVow').innerHTML = "The string does not contain any vowels";
+
+ }
+}
+function patternGen()
+{
+  var str = "";
+  
+                for(var b=10 ; b>1; b--)
+                {
+                  for(j=10; j>=b; j--) 
+                  {
+                    
+                    str = str + "*";
+
+                  }
+                  str = str +"<br>";
+                }
+                document.getElementById('outgen').innerHTML = str;
+
+}
+function patternGen2()
+{
+  var str = "";
+  
+                for(var b=1 ; b<10; b++)
+                {
+                  for(j=10; j>b; j--) 
+                  {
+                    
+                    str = str + "*";
+
+                  
+                  }
+                  str = str +"<br>";
+
+
+                 // document.write(j + " = J");
+                }
+                document.getElementById('outgen').innerHTML = str;
+
+}
+function patternGen4()
+{
+  var str = "";
+  
+                for(var b=1 ; b<5; b++)
+                {
+                  for(j=5; j>b; j--) 
+                  {
+                    
+                    str = str + "*";
+
+                  
+                  }
+                  if(b==4)
+                  str = str;
+                  else
+                  str = str +"<br>";
+                }
+                for(var b=5 ; b>1; b--)
+                {
+                  for(j=5; j>=b; j--) 
+                  {
+                    
+                    str = str + "*";
+
+                  }
+                  str = str +"<br>";
+                }
+                document.getElementById('outgen').innerHTML = str;
+
+}
+function patternGen3()
+{
+  var i = 5;
+  var str= "" ;
+for(j=1 ;j<i; j++)
+{
+  for(k=1; k<=(i-j); k++)
+  {
+    //document.write('&nbsp;')
+    str = str + '&nbsp;' ;
+  }
+  for (l=1;l<=j;l++)
+  {
+    //document.write("*")
+    str = str + "*&nbsp;" ;
+  }
+  //document.write("<br>");
+  str = str + "<br>" ;
+}  
+//document.getElementById('outgen').innerHTML = str;
+
+for(j=i ;j>=1; j--)
+{
+  for(k=(i-j); k>=1; k--)
+  {
+   // document.write('&nbsp')
+   str = str + '&nbsp;' ;
+
+  }
+  for (l=1;l<=j;l++)
+  {
+   // document.write("*")
+   str = str + "*&nbsp;"  ;
+  }
+  //document.write("<br>");
+  str = str + "<br>" ;
+} 
+
+document.getElementById('outgen').innerHTML = str;
+} 
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+    </script>
+</body>
